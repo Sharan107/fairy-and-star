@@ -27,15 +27,15 @@ function setup() {
 
 	star = createSprite(650,30);
 	star.addImage(starImg);
-	star.scale = 0.2;
-	star.x=starBody.position.x;
-	star.y=starBody.position.y;
+	star.scale = 0.2
 
 	engine = Engine.create();
 	world = engine.world;
 
 	starBody = Bodies.circle(650 , 30 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, starBody);
+	star.x=starBody.position.x;
+	star.y=starBody.position.y;
 	
 	Engine.run(engine);
 
@@ -47,6 +47,10 @@ function draw() {
 
 keyPressed();
 
+if (starBody.position.y>450){
+    Matter.Body.setStatic(starBody,true);
+}
+	
   drawSprites();
 
 }
@@ -64,7 +68,4 @@ function keyPressed() {
 		star.velocityY=+4;
 	}
 
-	if (starBody.position.y>450){
-		Matter.Body.setStatic(starBody,isStatic);
-	}
 }
