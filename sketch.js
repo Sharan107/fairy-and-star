@@ -50,7 +50,7 @@ star.y=starBody.position.y;
 keyPressed();
 
 if (starBody.position.y>450){
-    Matter.Body.setStatic(starBody,true);
+    Body.setStatic(starBody,true);
 }
 	
   drawSprites();
