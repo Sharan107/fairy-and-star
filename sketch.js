@@ -49,7 +49,7 @@ star.y=starBody.position.y;
 	
 keyPressed();
 
-if (starBody.position.y>450){
+if (starBody.position.y>470){
     Body.setStatic(starBody,true);
 }
 	
