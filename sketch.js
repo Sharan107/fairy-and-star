@@ -60,10 +60,10 @@ if (starBody.position.y>450){
 function keyPressed() {
 	//write code here
 	if (keyWentDown("right_arrow")){
-		fairy.x=fairy.x+2;
+		fairy.x=fairy.x+15;
 	}	  
 	if (keyWentDown("left_arrow")){
-		fairy.x=fairy.x-2;
+		fairy.x=fairy.x-15;
 	}
 
 	if (keyWentDown("down_arrow")){
